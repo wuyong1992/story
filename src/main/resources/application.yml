@@ -1,0 +1,48 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.196.17:3306/story?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  redis:
+    host: 106.15.196.17
+    port: 6379
+    database: 0
+    password: root
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+
+#MyBatis≈‰÷√
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.wuyong.story.entity
+
+#SQL ‰≥ˆ
+logging:
+  level:
+    com.wuyong.story.mapper: trace
+
+
+#FTP≈‰÷√
+ftp.server.ip: 106.15.196.17
+ftp.server.port: 21
+ftp.user: ftpuser
+ftp.pass: jianguo1992
+ftp.server.http.prefix: http://img.huyunyun.com/
+
+password.salt: geelysdafaqj23ou89ZXcj@#$@#$#@KJdjklj;D../dSF.,
+
+
+
+
+#

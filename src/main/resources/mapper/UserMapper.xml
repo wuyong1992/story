@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuyong.story.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.wuyong.story.entity.User">
+        <id column="user_id" property="userId" javaType="java.lang.Integer"/>
+        <id column="username" property="username" javaType="java.lang.String"/>
+        <id column="password" property="password" javaType="java.lang.String"/>
+        <id column="create_time" property="createTime" javaType="java.util.Date"/>
+        <id column="update_time" property="updateTime" javaType="java.util.Date"/>
+    </resultMap>
+
+    <sql id="userColumn">
+        user_id, username, password, create_time, update_time
+    </sql>
+
+    <insert id="insertUserByUsernameAndPassword" parameterType="com.wuyong.story.entity.User">
+        INSERT INTO user (username, password) VALUES (#{username}, #{password})
+    </insert>
+
+    <select id="selectUserByUsernameAndPassword" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="userColumn"/>
+        FROM user AS u
+        WHERE u.username = #{username} AND u.password = #{password}
+    </select>
+
+</mapper>
