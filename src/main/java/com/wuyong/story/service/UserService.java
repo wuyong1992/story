@@ -10,8 +10,11 @@ import com.wuyong.story.entity.User;
  */
 public interface UserService {
 
-    ServerResponse selectUser(String username, String password);
 
-    ServerResponse insertUser(String username, String password);
+    ServerResponse login(String phone, String password);
+
+    ServerResponse register(String username, String phone, String password);
+
+
 
 }

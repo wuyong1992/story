@@ -16,14 +16,14 @@
     </sql>
 
     <insert id="insertUserByUsernameAndPassword" parameterType="com.wuyong.story.entity.User">
-        INSERT INTO user (username, password) VALUES (#{username}, #{password})
+        INSERT INTO user (username, phone, password) VALUES (#{username}, #{phone}, #{password})
     </insert>
 
     <select id="selectUserByUsernameAndPassword" resultMap="BaseResultMap" parameterType="map">
         SELECT
         <include refid="userColumn"/>
         FROM user AS u
-        WHERE u.username = #{username} AND u.password = #{password}
+        WHERE u.phone = #{phone} AND u.password = #{password}
     </select>
 
 </mapper>

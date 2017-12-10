@@ -19,7 +19,11 @@ public class User {
     @Id
     @GeneratedValue
     private Integer userId;
+    /* 用户名 */
     private String username;
+    /* 手机号 登录账号 */
+    private String phone;
+    /* 登录密码 */
     private String password;
 
     private Date createTime;

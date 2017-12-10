@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface UserMapper {
 
-    User selectUserByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+    User selectUserByUsernameAndPassword(@Param("phone") String phone, @Param("password") String password);
 
-    int insertUserByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+    int insertUserByUsernameAndPassword(@Param("username") String username, @Param("phone")String phone, @Param("password") String password);
 }

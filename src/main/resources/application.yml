@@ -22,18 +22,18 @@ spring:
       min-idle: 0
     timeout: 0
 
-#MyBatisÅäÖÃ
+#MyBatisé…ç½®
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.wuyong.story.entity
 
-#SQLÊä³ö
+#SQLæ‰“å°
 logging:
   level:
     com.wuyong.story.mapper: trace
 
 
-#FTPÅäÖÃ
+#FTPé…ç½®
 ftp.server.ip: 106.15.196.17
 ftp.server.port: 21
 ftp.user: ftpuser

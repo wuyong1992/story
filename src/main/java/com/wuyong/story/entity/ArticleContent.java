@@ -9,26 +9,22 @@ import java.util.Date;
 
 /**
  * created by JianGuo
- * on 2017/12/7
- * description: 标签
+ * on 2017/12/9
+ * description: 文章内容
  */
+
 @Entity
 @Data
-public class Tag {
+public class ArticleContent {
 
     @Id
     @GeneratedValue
-    private Integer tagId;
+    private Integer articleContentId;
+    /* 文章内容表 */
+    private String articleContentDetail;
 
-    /* 标签名称 */
-    private String tagName;
-    /* 标签状态 */
-    private Integer tagStatus;
-    /* 标签排序 */
-    private Integer tagSort;
 
     private Date createTime;
     private Date updateTime;
     private Date deleteTime;
-
 }

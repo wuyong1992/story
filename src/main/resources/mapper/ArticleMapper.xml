@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuyong.story.mapper.ArticleMapper">
+    <resultMap id="BaseResultMap" type="com.wuyong.story.entity.Article">
+        <id column="article_id" property="articleId" javaType="java.lang.Integer"/>
+        <id column="article_title" property="articleTitle" javaType="java.lang.String"/>
+        <id column="user_id" property="userId" javaType="java.lang.Integer"/>
+        <id column="article_source" property="articleSource" javaType="java.lang.Integer"/>
+        <id column="article_audience" property="articleAudience" javaType="java.lang.Integer"/>
+        <id column="article_top" property="articleTop" javaType="java.lang.Integer"/>
+        <id column="article_recommend" property="articleRecommend" javaType="java.lang.Integer"/>
+        <id column="article_click" property="articleClick" javaType="java.lang.Integer"/>
+        <id column="article_content_id" property="articleContentId" javaType="java.lang.Integer"/>
+        <id column="article_status" property="articleStatus" javaType="java.lang.Integer"/>
+        <id column="article_sort" property="articleSort" javaType="java.lang.Integer"/>
+        <id column="article_thumbnail" property="articleThumbnail" javaType="java.lang.String"/>
+        <id column="article_main_thumbnail" property="articleMainThumbnail" javaType="java.lang.String"/>
+        <id column="create_time" property="createTime" javaType="java.util.Date"/>
+        <id column="update_time" property="updateTime" javaType="java.util.Date"/>
+        <id column="delete_time" property="deleteTime" javaType="java.util.Date"/>
+    </resultMap>
+
+    <sql id="userColumn">
+        article_id, article_title, user_id, article_source, article_audience, article_top, article_recommend, article_click, article_content_id, article_status, article_sort,
+        article_thumbnail, article_main_thumbnail, create_time, update_time, delete_time
+    </sql>
+
+    <insert id="saveArticle" parameterType="com.wuyong.story.entity.Article">
+--         动态sql
+    </insert>
+
+
+</mapper>
