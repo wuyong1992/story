@@ -1,5 +1,10 @@
 package com.wuyong.story.util;
 
+import com.aliyun.oss.OSSClient;
+import com.wuyong.story.config.AliAccountConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.MultipartFile;
+
 /**
  * created by JianGuo
  * on 2017/12/10
@@ -8,4 +13,15 @@ package com.wuyong.story.util;
  * 2.上传至七牛云或者阿里OSS
  */
 public class FileUploadUtil {
+
+    @Autowired
+    private OSSClient ossClient;
+
+    @Autowired
+    private AliAccountConfig aliAccountConfig;
+
+    private String fileUpload(MultipartFile file, String folder) {
+
+        return null;
+    }
 }

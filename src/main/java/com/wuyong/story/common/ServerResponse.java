@@ -2,6 +2,7 @@ package com.wuyong.story.common;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,8 +12,9 @@ import java.io.Serializable;
 /**
  * Created by 坚果
  * on 2017/9/16
+ * description: 服务器统一返回对象
  */
-@Getter@Setter@ToString
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ServerResponse<T> implements Serializable {
 
