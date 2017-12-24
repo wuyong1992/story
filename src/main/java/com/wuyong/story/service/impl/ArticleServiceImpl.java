@@ -19,11 +19,11 @@ import javax.transaction.Transactional;
 public class ArticleServiceImpl implements ArticleService {
 
 
-
-
-
     @Override
     public ServerResponse saveArticle(Article article) {
         return null;
     }
+
+
+
 }

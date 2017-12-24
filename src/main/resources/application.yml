@@ -49,7 +49,7 @@ ali:
     accessKeySecret: YIuRyxeBO9KmK5pl0YikE3LNY2hPoJ
     bucketName: image-web
     CNAME: ali-image.huyunyun.com
-    folder: test/
+    folder: story
 #    endpoint: oss-cn-hangzhou.aliyuncs.com
 #    accessKeyId: LTAILJgIbhFqs9xp
 #    accessKeySecret: 3PACXXkcJGlg1vLLUNVaAb5mKl1VHj

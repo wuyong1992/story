@@ -10,6 +10,8 @@ public class Const {
     /* MD5盐值 */
     public static final String MD5_SALT = "geelysdafaqj23ou89ZXcj@#$@#$#@KJdjklj;D../dSF.,";
 
+    public static final String DATE_FORMAT1 = "yyyy-MM-dd/HH-mm-ss";
+
 
     /* 标签常量接口 */
     private interface Tag {

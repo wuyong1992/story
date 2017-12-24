@@ -1,15 +1,19 @@
 package com.wuyong.story.controller.backend;
 
+import com.google.common.collect.Maps;
 import com.wuyong.story.common.ServerResponse;
+import com.wuyong.story.config.AliAccountConfig;
 import com.wuyong.story.entity.Article;
-import com.wuyong.story.entity.User;
 import com.wuyong.story.service.ArticleService;
+import com.wuyong.story.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Map;
 
 /**
  * created by JianGuo
@@ -24,6 +28,11 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
+    @Autowired
+    private FileService fileService;
+    @Autowired
+    private AliAccountConfig aliAccountConfig;
+
 
     @PostMapping(value = "save_article")
     private ServerResponse saveArticle(Article article) {
@@ -31,10 +40,17 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "upload")
-    private String upload(MultipartFile file) {
+    private Map upload(MultipartFile file) {
         log.info("file:{}",file);
+        String imageUrl = fileService.imageUpload(file, aliAccountConfig.getFolder());
+        Map resultMap = Maps.newHashMap();
+        if (imageUrl != null) {
+            resultMap.put("link", imageUrl);
+            return resultMap;
+        } else {
+            return null;
+        }
 
-        return "http://img.bbs.csdn.net/upload/201409/11/1410417123_921560.png";
     }
 
 }

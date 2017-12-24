@@ -11,4 +11,5 @@ import com.wuyong.story.entity.Article;
 public interface ArticleService {
 
     ServerResponse saveArticle(Article article);
+
 }
