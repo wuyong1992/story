@@ -2,10 +2,8 @@ package com.wuyong.story.controller.backend;
 
 import com.google.common.collect.Maps;
 import com.wuyong.story.common.ServerResponse;
-import com.wuyong.story.config.AliAccountConfig;
 import com.wuyong.story.entity.Article;
 import com.wuyong.story.service.ArticleService;
-import com.wuyong.story.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,29 +26,27 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
-    @Autowired
-    private FileService fileService;
-    @Autowired
-    private AliAccountConfig aliAccountConfig;
-
 
     @PostMapping(value = "save_article")
     private ServerResponse saveArticle(Article article) {
         return articleService.saveArticle(article);
     }
 
-    @RequestMapping(value = "upload")
-    private Map upload(MultipartFile file) {
-        log.info("file:{}",file);
-        String imageUrl = fileService.imageUpload(file, aliAccountConfig.getFolder());
+    @RequestMapping(value = "rich_text_image_upload")
+    private Map richTextImageUpload(MultipartFile file) {
+        log.info("file:{}", file);
+        String richTextImageUrl = articleService.richTextImageUpload(file);
         Map resultMap = Maps.newHashMap();
-        if (imageUrl != null) {
-            resultMap.put("link", imageUrl);
+        if (richTextImageUrl != null) {
+            resultMap.put("link", richTextImageUrl);
             return resultMap;
         } else {
             return null;
         }
-
     }
 
+    @RequestMapping(value = "article_upload")
+    private ServerResponse articleUpload(Article article) {
+        return null;
+    }
 }

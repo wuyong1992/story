@@ -47,9 +47,9 @@ ali:
     endpoint: oss-cn-shanghai.aliyuncs.com
     accessKeyId: LTAICspanl7W8l0H
     accessKeySecret: YIuRyxeBO9KmK5pl0YikE3LNY2hPoJ
-    bucketName: image-web
-    CNAME: ali-image.huyunyun.com
-    folder: story
+    bucketName: story-1992
+    CNAME: story-oss.huyunyun.com
+    folder: text
 #    endpoint: oss-cn-hangzhou.aliyuncs.com
 #    accessKeyId: LTAILJgIbhFqs9xp
 #    accessKeySecret: 3PACXXkcJGlg1vLLUNVaAb5mKl1VHj

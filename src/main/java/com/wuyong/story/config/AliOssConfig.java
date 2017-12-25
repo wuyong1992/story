@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by 坚果
  * on 2017/9/18
- * ali oss 对象存储
+ * ali oss 对象存储 （弃用）
  */
 @Component
 public class AliOssConfig {
