@@ -22,11 +22,8 @@ import java.util.UUID;
 @Slf4j
 public class AliOssUtil {
 
-
-
-
-    /* 富文本中的图片上传 */
-    public static String richTextImageUpload(MultipartFile file, String folder) {
+    /* 图片上传 */
+    public static String imageUpload(MultipartFile file, String folder) {
         // 1.构造OSSClient对象
         ClientConfiguration conf = new ClientConfiguration();
         conf.setSupportCname(true);

@@ -45,6 +45,13 @@ public class ArticleController {
         }
     }
 
+    @RequestMapping("image_upload")
+    private String imageUpload(MultipartFile file) {
+        String imageResultUrl = articleService.imageUpload(file);
+        return imageResultUrl;
+    }
+
+
     @RequestMapping(value = "article_upload")
     private ServerResponse articleUpload(Article article) {
         return null;

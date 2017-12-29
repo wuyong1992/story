@@ -25,8 +25,8 @@ public class MyAliOssConfig {
     public static String CNAME = "story-oss.huyunyun.com";
 
     /* 图片上传到指定文件夹下 */
-    public static String imageFolder = "image";
+    public static String IMAGE_FOLDER = "image";
 
     /* 富文本中的图片文件夹 */
-    public static String richTextImageFolder = "richtext/image";
+    public static String RICH_TEXT_IMAGE_FOLDER = "richtext/image";
 }

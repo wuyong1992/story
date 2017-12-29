@@ -15,4 +15,6 @@ public interface ArticleService {
 
     String richTextImageUpload(MultipartFile file);
 
+    String imageUpload(MultipartFile file);
+
 }

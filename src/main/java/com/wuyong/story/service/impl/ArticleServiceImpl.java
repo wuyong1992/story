@@ -29,8 +29,14 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public String richTextImageUpload(MultipartFile file) {
-        String folder = MyAliOssConfig.richTextImageFolder;
-        return AliOssUtil.richTextImageUpload(file, folder);
+        String folder = MyAliOssConfig.RICH_TEXT_IMAGE_FOLDER;
+        return AliOssUtil.imageUpload(file, folder);
+    }
+
+    @Override
+    public String imageUpload(MultipartFile file) {
+        String folder = MyAliOssConfig.IMAGE_FOLDER;
+        return AliOssUtil.imageUpload(file, folder);
     }
 
 
